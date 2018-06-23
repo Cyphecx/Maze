@@ -76,9 +76,5 @@ class Cell:
         return self.y
 
 
-pygame.init()
-logo = pygame.image.load("logo.png")
-pygame.display.set_icon(logo)
-pygame.display.set_caption("minimal program")
 maze = Maze(20, 20)
 maze.print_maze()
