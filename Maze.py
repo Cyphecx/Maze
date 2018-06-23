@@ -1,5 +1,5 @@
 import random
-
+import pygame
 
 class Maze:
 
@@ -58,7 +58,8 @@ class Maze:
 
     def print_maze(self):
         for x in self.cells:
-            print(x)
+            for cell in x:
+                print(str(cell.get_x()) + " " + str(cell.get_y()) + " | ", end="")
 
 
 class Cell:
@@ -75,5 +76,9 @@ class Cell:
         return self.y
 
 
+pygame.init()
+logo = pygame.image.load("logo.png")
+pygame.display.set_icon(logo)
+pygame.display.set_caption("minimal program")
 maze = Maze(20, 20)
 maze.print_maze()
