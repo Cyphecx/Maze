@@ -61,7 +61,6 @@ class Maze:
             for cell in x:
                 print(str(cell.get_x()) + " " + str(cell.get_y()) + " | ", end="")
 
-
 class Cell:
 
     def __init__(self, x, y):
